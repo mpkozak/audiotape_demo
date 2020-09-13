@@ -5,8 +5,7 @@ import React, {
   useCallback,
 } from 'react';
 import './App.css';
-
-
+import audioFiles from '../audio';
 
 
 
@@ -34,9 +33,17 @@ function usePlayhead(getPlayhead) {
 
 
 
-
-
 export default function App({ tape } = {}) {
+  const [loaded, setLoaded] = useState(null);
+
+  useEffect(() => {
+    if (tape && loaded === null) {
+      setLoaded(false);
+      tape.load(audioFiles)
+        .then(() => setLoaded(true));
+    };
+  }, [tape, loaded, setLoaded]);
+
   const playhead = usePlayhead(tape.getPlayhead);
 
   const lz = (val, len = 2) => (('0').repeat(len) + val).slice(-len);
@@ -63,6 +70,11 @@ export default function App({ tape } = {}) {
 
   return (
     <div className="App">
+      {!loaded && (
+        <div className="Loading">
+          <h1>Loading Audio...</h1>
+        </div>
+      )}
       <div className="Transport">
         <button className="Transport__button disabled" onClick={null}>
           <span aria-label="record" role="img">⏺</span>

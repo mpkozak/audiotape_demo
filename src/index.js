@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import AudioTape, { polyfills } from 'audiotape';
 import './index.css';
 import App from './components/App';
-import audiofiles from './audio';
 
 
 polyfills();
@@ -17,7 +16,8 @@ const params = {
   playbackSpeed: 1,
   scrubSpeed: 10,
 };
-const tape = new AudioTape(audiofiles, params);
+// const tape = new AudioTape(audiofiles, params);
+const tape = new AudioTape(params);
 
 
 
