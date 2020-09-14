@@ -14,9 +14,8 @@ const params = {
   lookahead: 2,
   latency: .1,
   playbackSpeed: 1,
-  scrubSpeed: 10,
+  scrubSpeed: 5,
 };
-// const tape = new AudioTape(audiofiles, params);
 const tape = new AudioTape(params);
 
 

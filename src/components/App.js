@@ -5,7 +5,12 @@ import React, {
   useCallback,
 } from 'react';
 import './App.css';
-import audioFiles from '../audio';
+
+// import audioFiles from '../audio';
+const audioFiles = [
+  './audio/01.m4a',
+  './audio/02.m4a'
+];
 
 
 
@@ -76,14 +81,11 @@ export default function App({ tape } = {}) {
         </div>
       )}
       <div className="Transport">
-        <button className="Transport__button disabled" onClick={null}>
-          <span aria-label="record" role="img">⏺</span>
+        <button className="Transport__button" onClick={tape.stop}>
+          <span aria-label="stop" role="img">⏸</span>
         </button>
         <button className="Transport__button" onClick={tape.play}>
           <span aria-label="play" role="img">▶️</span>
-        </button>
-        <button className="Transport__button" onClick={tape.stop}>
-          <span aria-label="stop" role="img">⏸</span>
         </button>
         <button className="Transport__button"
           onMouseDown={tape.rew_start}
