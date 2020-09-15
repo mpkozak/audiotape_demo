@@ -90,12 +90,16 @@ export default function App({ tape } = {}) {
         <button className="Transport__button"
           onMouseDown={tape.rew_start}
           onMouseUp={tape.rew_stop}
+          onTouchStart={tape.rew_start}
+          onTouchEnd={tape.rew_stop}
         >
           <span aria-label="rewind" role="img">⏪</span>
         </button>
         <button className="Transport__button"
           onMouseDown={tape.ff_start}
           onMouseUp={tape.ff_stop}
+          onTouchStart={tape.ff_start}
+          onTouchEnd={tape.ff_stop}
         >
           <span aria-label="fast-forward" role="img">⏩</span>
         </button>

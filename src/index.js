@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import AudioTape, { polyfills } from 'audiotape';
 import './index.css';
-import App from './components/App';
+import App from './App';
 
 
 polyfills();
