@@ -1,6 +1,6 @@
 {
   "name": "audiotape_demo",
-  "version": "0.1.2",
+  "version": "0.2.1",
   "description": "Example of the AudioTape package using React.",
   "keywords": [
     "WebAudio",
