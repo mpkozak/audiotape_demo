@@ -5,7 +5,7 @@ import React, {
   useCallback,
 } from 'react';
 import './App.css';
-import audioFiles from './_audio';
+import { audioFiles } from './_audio';
 
 
 

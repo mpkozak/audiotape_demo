@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import AudioTape, { polyfills } from 'audiotape';
-import AudioTape, { polyfills } from './AudioTape';
+import AudioTape, { polyfills } from 'audiotape';
 import './index.css';
 import App from './App';
 

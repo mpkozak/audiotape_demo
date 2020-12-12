@@ -3,7 +3,7 @@ import t02 from './02.m4a';
 
 
 
-export default [
+export const audioFiles = [
   t01,
   t02,
 ];
