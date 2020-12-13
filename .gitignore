@@ -6,6 +6,8 @@
 
 # misc
 .DS_Store
+.eslintcache
 
 # local testing
 /src/AudioTape
+
